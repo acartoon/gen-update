@@ -1,0 +1,12 @@
+include ../_
+doctype html
+html
+    block var
+    +head(pageTitle)
+    body
+        +pageHeader
+        main.page
+            block content
+        +pageFooter
+        +templates
+        +scripts

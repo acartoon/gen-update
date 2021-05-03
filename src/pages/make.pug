@@ -1,0 +1,78 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var pageTitle = 'Личный кабинет'
+
+block content
+    -
+        var accordion = [
+            {
+                group: 'accordion',
+                type: 'default',
+                title: 'состав',
+                active: true,
+                content: 'ac-content-1'
+            },
+            {
+                group: 'accordion',
+                type: 'default',
+                title: 'применение',
+                active: false,
+                content: 'ac-content-2'
+            },
+            {
+                group: 'accordion',
+                type: 'default',
+                title: 'Ключевые ингредиенты',
+                active: false,
+                content: 'ac-content-3'
+            }
+
+        ]
+    .order-make
+        button(
+            type = "button"
+            data-target = "modal-map"
+            data-id-content = "select-delivery"
+            data-modal-template = "map"
+            data-event-close = "all"
+            data-event-overlay = "all"
+            data-animation-type = "right"
+        ) Открыть карту
+
+        div(data-content="select-delivery").order-make__select-delivery
+            .modal__fixed
+                h3 Выбор пункта самовывоза
+                +dropdown({
+                    title: 'Все пункты выдачи', isSelected: false, name: 'select', isOpen: false,
+                    attr: {
+                        "data-target": "modal-dropdown",
+                        "data-id-content": 'select',
+                        "data-modal-template": "slim",
+                        "data-event-close": "this",
+                        "data-event-overlay": "this",
+                        "data-animation-type": "right",
+                        "data-modal-overlay": "all",
+                    },
+                    bodyAttr: {"data-content": 'select'}
+                })
+                    +selectList({
+                        list: ['Все пункты выдачи', 'СДЭК', 'Боксберри'],
+                        inputName: 'select',
+                        event: 'select-delivery',
+                        type: 'radio',
+                    })
+
+        .container
+            each val in accordion
+                +accordion(val)
+                    case val.content
+                        when 'ac-content-1'
+                            p Вода, Глицерин, Пропилгептил Каприлат, Этилгексил Палмитат, Полиакрилат-13, Масло косточек плодов дерева Аргана, Миндальная кислота, Гликолевая кислота, Гидроксид аммония, Полисобутен, Тетра-карбоксиметил Нарингенинхалкон, Поли-акрилат Кроссполимер-6, Мирист
+                        when 'ac-content-2'
+                            p Втирать до готовности
+                        when 'ac-content-3'
+                            p Действие 1: Мгновенный смягчающий эффект
+                            p Аргановое масло содержит высокую концентрацию Омега-6 и витамина Е. + Обеспечивает кожу липидами для восстановления защитного барьера
+                            p Сухая кожа мгновенно успокаивается и восстанавливается

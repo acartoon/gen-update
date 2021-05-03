@@ -1,0 +1,7 @@
+/******************* close *********************/
+
+@import "src/style/_";
+
+.close-min {
+    @include min-icon('/i/icons/close-min.svg');
+}

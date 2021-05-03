@@ -1,0 +1,105 @@
+/******************* dropdown *********************/
+
+@import "src/style/_";
+
+.dropdown {
+    position: relative;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 8px 4px 8px 8px;
+        cursor: pointer;
+
+
+        .dropdown.selected & {
+            @include tabletStyle {
+                border-bottom: 2px solid #00B0A6;
+            }
+        }
+
+        @include tabletStyle {
+            padding: 8px 4px 20px 20px;
+            border-bottom: 1px solid #a0a09f;
+        }
+    }
+
+    &__title {
+        flex: 1 1;
+        margin: 0;
+
+        &:hover {
+            color: #00B0A6;
+        }
+    }
+
+    &__counter {
+        display: none;
+
+        .dropdown.selected &{
+            display: block;
+        }
+    }
+    &__body {
+        display: none;
+        position: absolute;
+        right: auto !important;
+        width: 240px;
+        top: 110%;
+        height: auto;
+        max-height: 0;
+        left: -12px;
+        background: #fff;
+        z-index: 11 !important;
+        -webkit-transition: max-height 0.2s ease;
+        transition: max-height 0.2s ease;
+        bottom: auto;
+        max-height: 358px;
+        box-shadow: 0px 8px 16px #00000014;
+        border: 1px solid rgba(29, 29, 27, 0.2);
+
+        .dropdown.show & {
+            display: block;
+        }
+    }
+
+    &__arrow {
+        margin-left: auto;
+        transform: rotate(90deg);
+        transition: transform 0.2s ease-in;
+
+        @include tabletStyle {
+            transform: rotate(180deg);
+        }
+
+        .dropdown.selected .dropdown__head:hover & {
+            @include tabletStyle {
+                display: none;
+            }
+
+        }
+
+        .dropdown.show & {
+            transform: rotate(0);
+            transition: transform .2s ease-in;
+        }
+
+    }
+
+    &__clear {
+        display: none;
+        margin-left: auto;
+
+        &:hover {
+            background-image: url('/i/icons/close-min-hover.svg');
+        }
+
+        .dropdown.selected .dropdown__head:hover & {
+            @include tabletStyle {
+                display: block;
+            }
+        }
+    }
+}

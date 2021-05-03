@@ -1,0 +1,51 @@
+/************ базовые стили ***************/
+@import "_";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #1D1D1B;
+    background-color: #FFF;
+    background-attachment: fixed;
+    background-image: url("i/noise.png");
+    background-repeat: repeat;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.overflow-mob {
+    @media (max-width: 1023px) {
+        overflow: hidden;
+    }
+}
+
+.hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @media (min-width: 480px) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    @media (min-width: 1152px) {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+}

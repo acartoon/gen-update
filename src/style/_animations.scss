@@ -1,0 +1,73 @@
+@keyframes overlay-show {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        visibility: visible;
+        transition: visibility 0s, -webkit-backdrop-filter .8s ease;
+        transition: backdrop-filter .8s ease, visibility 0s;
+        transition: backdrop-filter .8s ease, visibility 0s, -webkit-backdrop-filter .8s ease;
+    }
+}
+
+@keyframes overlay-hide {
+    0% {
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes modal-show-1 {
+    0% {
+        right: -640px;
+
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes modal-show {
+    0% {
+        right: -640px;
+
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+
+@keyframes modal-basket {
+    0% {
+        bottom: -300px;
+
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes modal-basket-1 {
+    0% {
+        bottom: -300px;
+
+    }
+
+    100% {
+        bottom: 0;
+    }
+}

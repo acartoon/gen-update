@@ -1,0 +1,33 @@
+.button {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    background: #1D1D1B;
+    border: none;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 32px;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 300ms ease, border-color 300ms ease;
+    font-family: 'Raleway-SemiBold', 'Arial',sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    &:hover {
+        background: #00B0A6;
+        border-color: #00B0A6;
+        transition: background 300ms ease, border-color 300ms ease;
+    }
+}

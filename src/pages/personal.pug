@@ -1,0 +1,60 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var pageTitle = 'Личный кабинет'
+
+block content
+    .personal
+        ._aside
+            ul.aside-menu
+                li(
+                    type="button"
+                    data-target="modal-tab"
+                    data-id-content="profile"
+                    data-modal-template="simple"
+                    data-event-close="all"
+                    data-event-overlay="all"
+                    data-animation-type="right"
+                )._item Профиль
+                li(
+                    type="button"
+                    data-target="modal-tab"
+                    data-id-content="orders"
+                    data-modal-template="simple"
+                    data-event-close="all"
+                    data-event-overlay="all"
+                    data-animation-type="right"
+                )._item Мои заказы
+                li(
+                    type="button"
+                    data-target="modal-tab"
+                    data-id-content="mailing"
+                    data-modal-template="simple"
+                    data-event-close="all"
+                    data-event-overlay="all"
+                    data-animation-type="right"
+                )._item Рассылки
+
+        ._content
+            .modal.modal-simple.modal-tab.show(data-content="profile")
+                h3 Мои заказы
+                p(
+                    type="button"
+                    data-target="modal-ajax"
+                    data-modal-template="simple"
+                    data-event-close="this"
+                    data-event-overlay="all"
+                    data-animation-type="right"
+                ) заказ 1
+                p заказ 2
+                p заказ 3
+            .modal.modal-simple.modal-tab(data-content="orders")
+                h3 Мой профиль
+                p имя
+                p фамилия
+                p почта
+                p  дата рождения
+            .modal.modal-simple.modal-tab(data-content="mailing")
+                h3 Рассылки
+                p какой-то текст рассылки

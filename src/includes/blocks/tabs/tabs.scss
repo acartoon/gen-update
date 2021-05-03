@@ -1,0 +1,50 @@
+.tab-content {
+    &__item {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        visibility: hidden;
+
+        &.active {
+            position: static;
+            z-index: 0;
+            display: block;
+            visibility: visible;
+        }
+    }
+}
+
+.nav-tabs {
+    &__item {
+        opacity: 0.6;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+
+.accordion {
+
+    &__body {
+        display: none;
+
+        .accordion.active & {
+            display: block;
+        }
+    }
+}
+
+
+.tab {
+    display: inline-block;
+    padding: 7px;
+    width: auto;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    color: rgba(29, 29, 27, 0.6);
+    -webkit-transition: color 300ms ease-in;
+    transition: color 300ms ease-in;
+}

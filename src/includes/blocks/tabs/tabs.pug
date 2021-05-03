@@ -1,0 +1,62 @@
+mixin tabs
+    .tabs(data-tab-group="tab1")
+        ul._tab.nav-tabs
+            li.nav-tabs__item.active(data-selected="true" data-target="tab" data-id-content="content1") Переключатель1
+            li.nav-tabs__item(data-target="tab" data-id-content="content2") Переключатель2
+            li.nav-tabs__item(data-target="tab" data-id-content="content3") Переключатель3
+        ul._content.tab-content(data-tab-group="tab1")
+            li.tab-content__item.active(data-selected="true" data-content="content1") Контент1
+            li.tab-content__item(data-content="content2") Контент2
+            li.tab-content__item(data-content="content3") Контент3
+
+
+mixin TabToggle(title)
+    p.tab=title
+
+mixin Tabs(group)
+    .tabs(data-tab-group=group)
+        block
+
+mixin tabNav(params)
+    ul.tabs__tab.nav-tabs
+        each val in params.nav
+            li.nav-tabs__item(class=(val.selected ? 'active' : '')
+                data-selected=val.selected
+                data-target="tab"
+                data-id-content=val.content
+                )
+                    +TabToggle(val.title)
+    ul.tabs__content.tab-content(data-tab-group=params.group)
+        block
+
+mixin tabContent(params)
+    li.tab-content__item(class=(params.selected ? 'active' : '')
+        data-selected=params.selected
+        data-content=params.content
+        )
+        block
+
+mixin accordion(params)
+    .accordion(data-accordion-group=params.group class=(params.active ? 'active' : ''))
+        ._head(data-target="accordion" data-accordion-type=params.type)=params.title
+        ._body
+            block
+
+
+
+mixin _accordion(params)
+    .accordion(data-accordion-group="accordion")
+        ._head(data-target="accordion") я заголовок аккордиона 1
+        ._body
+            p я тело аккардиона я тело аккардиона я тело аккардиона я тело аккардиона
+
+    .accordion.active(data-accordion-group="accordion")
+        ._head(data-target="accordion") я заголовок аккордиона 2
+        ._body
+            p я тело аккардиона я тело аккардиона я тело аккардиона я тело аккардиона
+    .accordion(data-accordion-group="accordion")
+        ._head(data-target="accordion") я заголовок аккордиона 3
+        ._body
+            p я тело аккардиона я тело аккардиона я тело аккардиона я тело аккардиона
+
+

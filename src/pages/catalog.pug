@@ -1,0 +1,30 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var pageTitle = 'Каталог'
+
+block content
+    .container
+        +catalogHeader
+    .container
+        section
+            button(
+                type="button"
+                data-target="modal"
+                data-id-content="filter"
+                data-modal-template="slim"
+                data-event-close="all"
+                data-event-overlay="all"
+                data-animation-type="right"
+            )
+                | фильтры
+        section
+            p.counter-filter.js-full-counter 0
+            .catalog__filter.js-content(data-content="filter")
+                +catalog-filter
+
+
+
+
+

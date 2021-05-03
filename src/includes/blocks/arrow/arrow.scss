@@ -1,0 +1,8 @@
+/******************* arrow *********************/
+
+@import "src/style/_";
+
+.arrow {
+
+    @include min-icon('/i/icons/arrow.svg');
+}

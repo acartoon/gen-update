@@ -1,0 +1,22 @@
+/******************* catalog-filter *********************/
+
+@import "src/style/_";
+
+.catalog-filter {
+    @include base-list(0, 0);
+
+    @include tabletStyle {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+
+        @include tabletStyle {
+            width: 168px;
+            margin-right: 6px;
+            margin-left: 6px;
+            margin-bottom: 16px;
+        }
+    }
+}

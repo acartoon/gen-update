@@ -1,0 +1,185 @@
+
+<!-- лайолит-->
+<!-- блоки--><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/opensans-light-webfont.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/opensans-regular-webfont.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/opensans-bold-webfont.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/helveticaneuecyr-thin-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/helveticaneuecyr-thin-webfont.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/roboto-light.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/roboto-light.woff2" as="font" crossorigin="anonymous"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="css/libs/slick.css" rel="stylesheet"/>
+    <link href="css/libs/slick-theme.css" rel="stylesheet"/>
+    <link href="css/libs/basic.css" rel="stylesheet"/>
+    <link href="css/libs/dropzone.css" rel="stylesheet"/>
+    <link href="css/libs/swiper.css" rel="stylesheet"/>
+    <link href="css/libs/select2.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="page-header"></header>
+    <main class="page">
+      <div class="container">
+        <div class="catalog-header catalog-header__description-wrapper">
+          <div class="catalog-header__title-block">
+            <p>для лица</p>
+            <h1>Против пигментации и депиляции</h1>
+            <p>15 товаров</p>
+          </div>
+          <div class="catalog-header__inner">
+            <div class="catalog-header__inner-wrap">
+              <div class="catalog-header__img"><img src="i/header.jpg" alt="изображение"/></div>
+            </div>
+            <div class="catalog-header__description">
+              <p>Подборка терапевтической косметики от врачей дерматологов GEN красоты. Мы подобрали для вас средства, которые:</p>
+              <ul>
+                <li>выравнивают тон кожи</li>
+                <li>регулируют выработку пигмента</li>
+                <li>выравнивают тон кожи</li>
+                <li>регулируют выработку пигмента</li>
+                <li>выравнивают тон кожи</li>
+                <li>регулируют выработку пигмента</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <section>
+          <button type="button" data-target="modal" data-id-content="filter" data-modal-template="slim" data-event-close="all" data-event-overlay="all" data-animation-type="right">фильтры</button>
+        </section>
+        <section>
+          <p class="counter-filter js-full-counter">0</p>
+          <div class="catalog__filter js-content" data-content="filter">
+            <ul class="catalog-filter">
+              <li class="catalog-filter__item">
+                <div class="dropdown" data-dropdown-type="sort">
+                  <div class="dropdown__head" data-target="modal-filter" data-id-content="sort" data-modal-template="slim" data-event-close="this" data-event-overlay="all" data-animation-type="right">
+                    <p class="dropdown__title">Сортировка</p><i class="dropdown__arrow arrow"></i>
+                  </div>
+                  <div class="dropdown__body" data-content="sort">
+                    <div class="select-list">
+                      <input type="radio" name="sort" id="sort0"/>
+                      <label class="select-list__item" for="sort0">По популярности</label>
+                      <input type="radio" name="sort" id="sort1"/>
+                      <label class="select-list__item" for="sort1">Сначала дороже</label>
+                      <input type="radio" name="sort" id="sort2"/>
+                      <label class="select-list__item" for="sort2">Сначала дешевле</label>
+                      <input type="radio" name="sort" id="sort3"/>
+                      <label class="select-list__item" for="sort3">По рейтингу</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="catalog-filter__item">
+                <div class="dropdown" data-dropdown-type="brand">
+                  <div class="dropdown__head" data-target="modal-filter" data-id-content="brand" data-modal-template="slim" data-event-close="this" data-event-overlay="all" data-animation-type="right">
+                    <p class="dropdown__title">Бренд</p><i class="dropdown__counter js-counter-val"></i><i class="dropdown__arrow arrow"></i><i class="dropdown__clear close-min js-clear-counter"></i>
+                  </div>
+                  <div class="dropdown__body" data-content="brand">
+                    <div class="select-list">
+                      <input class="js-counter" type="checkbox" name="brand" id="brand0"/>
+                      <label class="select-list__item" for="brand0">По популярности</label>
+                      <input class="js-counter" type="checkbox" name="brand" id="brand1"/>
+                      <label class="select-list__item" for="brand1">Сначала дороже</label>
+                      <input class="js-counter" type="checkbox" name="brand" id="brand2"/>
+                      <label class="select-list__item" for="brand2">Сначала дешевле</label>
+                      <input class="js-counter" type="checkbox" name="brand" id="brand3"/>
+                      <label class="select-list__item" for="brand3">По рейтингу</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="catalog-filter__item">
+                <div class="dropdown" data-dropdown-type="type-prod">
+                  <div class="dropdown__head" data-target="modal-filter" data-id-content="type-prod" data-modal-template="slim" data-event-close="this" data-event-overlay="all" data-animation-type="right">
+                    <p class="dropdown__title">Тип продукта</p><i class="dropdown__counter js-counter-val"></i><i class="dropdown__arrow arrow"></i><i class="dropdown__clear close-min js-clear-counter"></i>
+                  </div>
+                  <div class="dropdown__body" data-content="type-prod">
+                    <div class="select-list">
+                      <input class="js-counter" type="checkbox" name="type-prod" id="type-prod0"/>
+                      <label class="select-list__item" for="type-prod0">По популярности</label>
+                      <input class="js-counter" type="checkbox" name="type-prod" id="type-prod1"/>
+                      <label class="select-list__item" for="type-prod1">Сначала дороже</label>
+                      <input class="js-counter" type="checkbox" name="type-prod" id="type-prod2"/>
+                      <label class="select-list__item" for="type-prod2">Сначала дешевле</label>
+                      <input class="js-counter" type="checkbox" name="type-prod" id="type-prod3"/>
+                      <label class="select-list__item" for="type-prod3">По рейтингу</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="catalog-filter__item">
+                <div class="dropdown" data-dropdown-type="type-skin">
+                  <div class="dropdown__head" data-target="modal-filter" data-id-content="type-skin" data-modal-template="slim" data-event-close="this" data-event-overlay="all" data-animation-type="right">
+                    <p class="dropdown__title">Тип кожи</p><i class="dropdown__counter js-counter-val"></i><i class="dropdown__arrow arrow"></i><i class="dropdown__clear close-min js-clear-counter"></i>
+                  </div>
+                  <div class="dropdown__body" data-content="type-skin">
+                    <div class="select-list">
+                      <input class="js-counter" type="checkbox" name="type-skin" id="type-skin0"/>
+                      <label class="select-list__item" for="type-skin0">По популярности</label>
+                      <input class="js-counter" type="checkbox" name="type-skin" id="type-skin1"/>
+                      <label class="select-list__item" for="type-skin1">Сначала дороже</label>
+                      <input class="js-counter" type="checkbox" name="type-skin" id="type-skin2"/>
+                      <label class="select-list__item" for="type-skin2">Сначала дешевле</label>
+                      <input class="js-counter" type="checkbox" name="type-skin" id="type-skin3"/>
+                      <label class="select-list__item" for="type-skin3">По рейтингу</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer"></footer>
+    <div class="templates">
+      <div class="overlay"></div>
+      <div class="modal modal-simple" data-template="simple">
+        <div class="modal__header">
+          <button class="modal__close close" type="button" data-target="close"></button>
+        </div>
+        <div class="modal__body"></div>
+        <div class="modal__footer"></div>
+      </div>
+      <div class="modal modal-slim" data-template="slim">
+        <div class="modal__nav">
+          <button class="modal__back" type="button" data-target="close"></button>
+          <p class="modal__title">Фильтры</p>
+          <!--.__clear.text-link.js-clear-counter Очистить-->
+        </div>
+        <div class="modal__body"></div>
+        <div class="modal__footer">
+          <button class="button" type="button">Показать товары</button>
+        </div>
+      </div>
+      <div class="modal modal-simple modal-map" data-template="map">
+        <div class="modal__header">
+          <button class="modal__close close" type="button" data-target="close"></button>
+        </div>
+        <div class="modal__body"></div>
+      </div>
+    </div>
+    <script src="js/libs/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="js/libs/jquery.inputmask.js" type="text/javascript"></script>
+    <script src="js/libs/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="js/libs/slick.min.js" type="text/javascript"></script>
+    <script src="js/libs/swiper.js" type="text/javascript"></script>
+    <script src="js/libs/dropzone.js" type="text/javascript"></script>
+    <script src="js/libs/autosize.js" type="text/javascript"></script>
+    <script src="js/libs/jquery.qrcode.js" type="text/javascript"></script>
+    <script src="js/libs/select2.full.min.js" type="text/javascript"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyClcHYNx2vJ99TOIUbcoZ4kxwIn-HfRtW0"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>

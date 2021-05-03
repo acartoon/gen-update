@@ -1,0 +1,65 @@
+/******************* dropdown *********************/
+
+@import "src/style/_";
+
+.select-list {
+    @include base-list(0, 0);
+
+    input {
+        display: none;
+    }
+
+    &__item {
+        position: relative;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: -0.15px;
+        font-size: 14px;
+        line-height: 20px;
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 20px;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 300ms ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+
+        .select-list input:checked + & {
+            color: #009F9C;
+        }
+
+        .select-list input:checked + &:before {
+            content: '';
+            position: absolute;
+            right: 20px;
+            width: 24px;
+            height: 24px;
+            background-image: url(/i/icons/tick.svg);
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+}
+
+//@media(min-width: 512px) {
+//    #catalogLine {
+//        display: flex;
+//        align-items: center;
+//        justify-content: space-around;
+//        padding: 0;
+//    }
+//
+//    #catalogLine .column:last-child {
+//        float: none;
+//    }
+//}

@@ -1,0 +1,18 @@
+.overlay {
+    z-index: 100;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("/i/noise.png");
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    animation: overlay-hide 300ms forwards;
+}
+
+.overlay.show {
+    animation: overlay-show 300ms forwards;
+    animation-direction: normal;
+}

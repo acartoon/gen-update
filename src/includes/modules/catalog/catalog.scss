@@ -1,0 +1,13 @@
+/******************* catalog *********************/
+
+@import "src/style/_";
+
+.catalog {
+    &__filter {
+        display: none;
+
+        @include tabletStyle {
+            display: block;
+        }
+    }
+}
